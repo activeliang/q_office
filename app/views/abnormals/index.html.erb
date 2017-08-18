@@ -1,0 +1,37 @@
+<h3>异常记录列表</h3>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>日期</th>
+      <th>客户</th>
+      <th>制工袋</th>
+      <th>款号</th>
+      <th>图片</th>
+      <th>件数</th>
+      <th>业务</th>
+      <th>负责人</th>
+      <th>异常原因</th>
+      <th>异常人</th>
+      <th>新交期</th>
+      <th>备注</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @abnormals.each do |abnormal| %>
+      <tr>
+        <td><%= abnormal.input_time %></td>
+        <td><%= abnormal.client %></td>
+        <td><%= abnormal.envelop %></td>
+        <td><%= abnormal.model_no %></td>
+        <td><%= abnormal.image_url %></td>
+        <td><%= abnormal.quantity %></td>
+        <td><%= abnormal.merchandiser %></td>
+        <td><%= abnormal.principal %></td>
+        <td><%= abnormal.reason %></td>
+        <td><%= abnormal.faulter %></td>
+        <td><%= abnormal.new_delivery %></td>
+        <td><%= abnormal.remarks %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,17 @@
+<div class="container">
+  <h3>新增异常记录</h3>
+
+  <%= simple_form_for @abnormal do |f| %>
+    <%= f.input :input_time %>
+    <%= f.input :envelop %>
+    <%= f.input :principal %>
+    <%= f.input :reason %>
+    <%= f.input :faulter %>
+    <%= f.input :new_delivery %>
+    <%= f.input :department %>
+    <%= f.input :quantity %>
+    <%= f.input :remarks %>
+    <%= select_date Date.today, prefix: :start_date %>
+    <%= f.submit "submit" %>
+  <% end %>
+</div>
