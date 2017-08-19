@@ -3,4 +3,9 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :abnormals
+  resources :form_options do
+    member do
+      post :delete_item
+    end
+  end
 end
